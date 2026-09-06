@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kappa de Fleiss</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Kappa de Fleiss</h1>
+    <p class="description">
+      Alineamiento de 4 transcripciones mediante Needleman-Wunsch y cálculo de Kappa de Fleiss.
+    </p>
+
+    <section class="card">
+      <h2>Transcripciones</h2>
+      <p>Carga exactamente 4 archivos <code>.txt</code>. Cada línea debe corresponder a una cláusula u oración.</p>
+
+      <div class="files-grid">
+        <label>
+          <span>Evaluador 1</span>
+          <input type="file" id="file1" accept=".txt,text/plain">
+        </label>
+        <label>
+          <span>Evaluador 2</span>
+          <input type="file" id="file2" accept=".txt,text/plain">
+        </label>
+        <label>
+          <span>Evaluador 3</span>
+          <input type="file" id="file3" accept=".txt,text/plain">
+        </label>
+        <label>
+          <span>Evaluador 4</span>
+          <input type="file" id="file4" accept=".txt,text/plain">
+        </label>
+      </div>
+
+      <button id="runButton">Calcular Kappa</button>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section class="card">
+      <div class="results-header">
+        <h2>Resultados</h2>
+        <button id="downloadButton" class="secondary" disabled>Descargar alineamiento_resultado.txt</button>
+      </div>
+      <pre id="output">Aquí aparecerán los resultados.</pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
